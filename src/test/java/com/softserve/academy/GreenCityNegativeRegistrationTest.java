@@ -28,7 +28,12 @@ class GreenCityNegativeRegistrationTest {
         
         driver = WebDriverManager.chromedriver().capabilities(options).create();
         driver.manage().window().maximize();
-        // At this stage, we are not using complex waits, so we just maximize the windowdfdfijdoiuhsvodhvdihgosd
+        // At this stage, we are not using complex waits, so we just maximize the f
+        // At this stage, we are not using complex waits, so we just maximize the f
+        // At this stage, we are not using complex waits, so we just maximize the f
+        // At this stage, we are not using complex waits, so we just maximize the f
+        // At this stage, we are not using complex waits, so we just maximize the f
+        // At this stage, we are not using complex waits, so we just maximize the fff
     }
 
     @BeforeEach
