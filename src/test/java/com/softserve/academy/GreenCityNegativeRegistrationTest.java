@@ -22,8 +22,9 @@ class GreenCityNegativeRegistrationTest {
 
     @BeforeAll
     static void setUp() {
-        FirefoxOptions options = new FirefoxOptions();
-        options.addPreference("intl.accept_languages", "en-GB, en");
+        ChromeOptions options = new ChromeOptions();
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.addPreference("intl.accept_languages", "en-GB, en");
         // Check if we are running in CI (GitHub Actions)
         if (System.getenv("GITHUB_ACTIONS") != null) {
             options.addArguments("--headless=new");
@@ -32,7 +33,8 @@ class GreenCityNegativeRegistrationTest {
             options.addArguments("--window-size=1920,1080");
         }
 
-        driver = WebDriverManager.firefoxdriver().capabilities(options).create();
+        driver = WebDriverManager.chromiumdriver().capabilities(options).create();
+//        driver = WebDriverManager.firefoxdriver().capabilities(options).create();
         driver.manage().window().maximize();
     }
 
@@ -111,6 +113,7 @@ class GreenCityNegativeRegistrationTest {
         assertSignUpButtonDisabled();
 
     }
+
 
     @Test
     @DisplayName("Empty username → username required")
